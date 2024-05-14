@@ -27,3 +27,6 @@ headers = data[0]
 data_rows = data[1:]
 
 documents = [{header: row[idx] for idx, header in enumerate(headers)} for row in data_rows]
+
+collection.insert_many(documents)
+print("Data Inserted in MongoDB Successfully.")
